@@ -24,7 +24,8 @@ public class TrainControllerImpl implements TrainController {
 					timer--;
 					
 				}
-			} catch(InterruptedException e){}
+			}
+			catch(){}
 			}
 		};
 	}
