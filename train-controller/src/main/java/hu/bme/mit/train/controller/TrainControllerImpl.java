@@ -8,12 +8,14 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private int timer;
+	private Thread thread;
 
 	public void TrainControllerImpl(){
 		timer = 2;
 		thread = new Thread(){
 			public void start(){
 				thread.start();
+			try{
 				followSpeed();
 				while(timer > 0){
 					if(timer == 0){
@@ -22,6 +24,7 @@ public class TrainControllerImpl implements TrainController {
 					timer--;
 					
 				}
+			} catch(InterruptedException e){}
 			}
 		};
 	}
