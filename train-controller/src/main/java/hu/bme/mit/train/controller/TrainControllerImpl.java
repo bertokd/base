@@ -13,8 +13,8 @@ public class TrainControllerImpl implements TrainController {
 	public void TrainControllerImpl(){
 		timer = 2;
 		thread = new Thread(){
-			public void start(){
-				thread.start();
+			public void run(){
+				thread.run();
 			try{
 				followSpeed();
 				while(timer > 0){
